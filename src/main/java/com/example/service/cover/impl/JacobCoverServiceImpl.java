@@ -15,7 +15,6 @@ public class JacobCoverServiceImpl implements JacobCoverService {
 		Variant varPartNumber;
 		try {
 			ActiveXComponent xCom = new ActiveXComponent("Catia.Application");
-			ActiveXComponent xCom = 
 			Dispatch dispCom = xCom.getObject();
 			xCom.setProperty("Visible", true);
 			Dispatch docs = xCom.getProperty("Documents").toDispatch();
