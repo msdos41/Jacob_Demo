@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://www.javaxue.com/skin/javajs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	function getResult(){
+		$.post("ajax/jacob/partnumber",{},function(result){
+			//alert(result);
+			document.getElementById("partNumber").innerHTML=result;
+		});
+	}
+	
+	function getSelect(){
+		$.post("ajax/jacob/select",{},function(result){
+			document.getElementById("select").innerHTML=result;
+		});
+	}
+</script>
+</head>
+<body>
+	<button onclick="getResult()">获取零件号</button>
+	<div>当前打开文档的零件号是：</div>
+	<div id="partNumber"></div>
+	<button onclick="getSelect()">获取交互选择</button>
+	<div>当前选择的元素是：</div>
+	<div id="select"></div>
+</body>
+</html>
